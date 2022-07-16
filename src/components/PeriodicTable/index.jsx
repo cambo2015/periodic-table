@@ -122,7 +122,7 @@ const PeriodicTable = () => {
                   img={x.spectral_img}
                   atomicMass={x.atomic_mass}
                   atomicNumber={x.number}
-                  color="orange"
+                  color="lightpurple"
                   element={x}
                   key={`pt-${x.name}`}
                 />
@@ -179,7 +179,7 @@ const PeriodicTable = () => {
             <KeyItem name={"Halogen"} color="lightblue" />
           </div>
           <div className="col">
-            <KeyItem name={"Lanthanide"} color="orange" />
+            <KeyItem name={"Lanthanide"} color="lightpurple" />
           </div>
           <div className="col">
             <KeyItem name={"Actinide"} color="lightorange" />

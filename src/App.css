@@ -82,6 +82,10 @@ canvas {
   background-color: rgb(251, 222, 169);
   color:black;
 }
+.btn-lightpurple,.bg-lightpurple{
+  background-color: #CBC3E3;
+  color:black;
+}
 .btn{
   margin:0px;
   text-transform: none;
