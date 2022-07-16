@@ -1,3 +1,8 @@
+canvas {
+  overflow: visible;
+}
+
+
 .App {
   text-align: center;
 }
@@ -36,3 +41,66 @@
     transform: rotate(360deg);
   }
 }
+
+.small-text{
+  font-size: 10px;
+}
+
+.btn-purple,.bg-purple{
+  background-color: #6610f2;
+  color:white;
+}
+
+.btn-purple:hover,.bg-purple:hover {
+  background-color: #6610f2;
+  color:white;
+}
+.btn-lightblue,.bg-lightblue{
+    background-color:rgb(108, 198, 223);
+    color: black;
+}
+
+.btn-lightgreen,.bg-lightgreen{
+  background-color:rgb(159, 233, 159);
+  color:black;
+}
+.btn-pink,.bg-pink{
+  background-color: #d63384;
+  color:white;
+}
+
+.btn-pink:hover,.bg-pink:hover {
+  background-color: hsl(330, 67%, 52%);
+  color: white;
+}
+
+.btn-orange,.bg-orange{
+  background-color: orange;
+  color:white;
+}
+.btn-lightorange,.bg-lightorange{
+  background-color: rgb(251, 222, 169);
+  color:black;
+}
+.btn{
+  margin:0px;
+  text-transform: none;
+  padding:10px;
+}
+.row{
+  /* --mdb-gutter-x:0px !important; */
+}
+
+
+.element-width{
+  width:45px !important;
+}
+
+.height-150{
+  height:150px;
+}
+
+
+
+
+
