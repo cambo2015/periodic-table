@@ -152,7 +152,7 @@ const PeriodicTable = () => {
         </div>
       </div>
       {/* key */}
-      <div className="container m-5">
+      <div className="container">
         <div className="row m-1">
           <div className="col">
             <KeyItem name={"Transition Metal"} color="primary" />

@@ -110,7 +110,7 @@ canvas {
   margin:50 !important;
   padding:0px !important;
   /* width:100% !important; */
-  /* max-width: 100% !important; */
+  max-width: 100% !important;
 }
 
 .row>*{
