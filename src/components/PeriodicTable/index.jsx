@@ -113,7 +113,7 @@ const PeriodicTable = () => {
             </div>
           );
         })}
-        <div className="row  m-1 mt-5 my-periodic-table">
+        <div className="row  m-1 mt-5 ">
           {json["hidden-row-1"].map((x) => {
             return (
               <div className={`col-lg m-${margin}`}>
@@ -132,7 +132,7 @@ const PeriodicTable = () => {
           })}
         </div>
         {/* hidden row 2 */}
-        <div className="row m-1 my-periodic-table">
+        <div className="row m-1">
           {json["hidden-row-2"].map((x) => {
             return (
               <div className={`col-lg m-${margin}`}>

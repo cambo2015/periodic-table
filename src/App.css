@@ -107,9 +107,9 @@ canvas {
 }
 
 .my-periodic-table{
-  margin:50 !important;
+  margin:0px !important;
   padding:0px !important;
-  /* width:100% !important; */
+  width:98% !important;
   max-width: 100% !important;
 }
 
