@@ -84,7 +84,7 @@ const PeriodicTable = () => {
   return (
     <div>
       <h1 className="text-center m-5">Periodic Table</h1>
-      <div className="container" id="periodic-table">
+      <div className="container my-periodic-table" id="periodic-table">
         {finalArr.map((rows) => {
           return (
             <div className="row m-1">
@@ -113,7 +113,7 @@ const PeriodicTable = () => {
             </div>
           );
         })}
-        <div className="row  mt-5">
+        <div className="row  m-1 mt-5 my-periodic-table">
           {json["hidden-row-1"].map((x) => {
             return (
               <div className={`col-lg m-${margin}`}>
@@ -132,10 +132,10 @@ const PeriodicTable = () => {
           })}
         </div>
         {/* hidden row 2 */}
-        <div className="row mt-1">
+        <div className="row m-1 my-periodic-table">
           {json["hidden-row-2"].map((x) => {
             return (
-              <div className="col-lg m-2 ">
+              <div className={`col-lg m-${margin}`}>
                 <PeriodicElement
                   name={x.name}
                   elementName={x.symbol}
@@ -188,9 +188,8 @@ const PeriodicTable = () => {
         </div>
       </div>
       {/* credits */}
-      
-       <Credits/>
-        
+
+      <Credits />
     </div>
   );
 };

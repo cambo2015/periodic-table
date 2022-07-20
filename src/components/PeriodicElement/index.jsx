@@ -58,11 +58,9 @@ const PeriodicElement = ({
         ) : (
           <span class="small-text">{atomicNumber}</span>
         )}
-
         <br />
         {elementName}
       </button>
-
       <div
         className="modal fade"
         id={name}
