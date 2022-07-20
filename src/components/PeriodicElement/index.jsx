@@ -49,7 +49,7 @@ const PeriodicElement = ({
     <>
       <button
         type="button"
-        className={`btn btn-${color} element-width`}
+        className={`btn btn-${color} w-100 m-1`}
         data-bs-toggle="modal"
         data-bs-target={"#" + name}
       >

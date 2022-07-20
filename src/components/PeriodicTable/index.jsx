@@ -4,6 +4,7 @@ import elementsJson from "../../elements.json";
 import KeyItem from "../KeyItem";
 import Credits from "./Credits";
 
+const margin = 1
 const PeriodicTable = () => {
   const json = JSON.parse(JSON.stringify(elementsJson));
   const finalArr = [];
@@ -90,7 +91,7 @@ const PeriodicTable = () => {
               {rows.map((x) => {
                 return (
                   <>
-                    <div className="col">
+                    <div className={`col-lg m-${margin}`}>
                       {x !== "" ? (
                         <PeriodicElement
                           name={x.name}
@@ -115,7 +116,7 @@ const PeriodicTable = () => {
         <div className="row  mt-5">
           {json["hidden-row-1"].map((x) => {
             return (
-              <div className="col m-6">
+              <div className={`col-lg m-${margin}`}>
                 <PeriodicElement
                   name={x.name}
                   elementName={x.symbol}
@@ -134,7 +135,7 @@ const PeriodicTable = () => {
         <div className="row mt-1">
           {json["hidden-row-2"].map((x) => {
             return (
-              <div className="col m-6">
+              <div className="col-lg m-2 ">
                 <PeriodicElement
                   name={x.name}
                   elementName={x.symbol}
