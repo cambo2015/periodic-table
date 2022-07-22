@@ -2,7 +2,7 @@ import React from "react";
 
 const Credits = () => {
   return (
-    <div class="card card-body" id="credits">
+    <div className="card card-body" id="credits">
       Made by Cameron Hansen <br />
       <span className="small-text">
         Thanks to{" "}
@@ -26,7 +26,7 @@ const Credits = () => {
       </span>
       <div className="text-center p-2">
         <button className="btn btn-primary" style={{ width: 300 }}>
-          <i class="fa-brands fa-github"></i> &nbsp;
+          <i className="fa-brands fa-github"></i> &nbsp;
           <a
             href="https://github.com/cambo2015/periodic-table"
             className="text-white"

@@ -37,35 +37,35 @@ const ElementProperties = ({
     <div>
       <p>
         Boil:{" "}
-        <span class="badge bg-primary">
+        <span className="badge bg-primary">
           {" "}
           {roundToHundreths(CtoF(kelvinToC(boil)))}F
         </span>
       </p>
       <p>
-        Category: <span class="badge bg-primary"> {category}</span>
+        Category: <span className="badge bg-primary"> {category}</span>
       </p>
       <p>
-        Density: <span class="badge bg-primary"> {density}</span>
+        Density: <span className="badge bg-primary"> {density}</span>
       </p>
       <p>
-        Melt: <span class="badge bg-primary"> {roundToHundreths(CtoF(kelvinToC(melt))) }F</span>
+        Melt: <span className="badge bg-primary"> {roundToHundreths(CtoF(kelvinToC(melt))) }F</span>
       </p>
       <p>
-        Period: <span class="badge bg-primary"> {period}</span>
+        Period: <span className="badge bg-primary"> {period}</span>
       </p>
       <p>
-        Phase: <span class="badge bg-primary"> {phase}</span>
+        Phase: <span className="badge bg-primary"> {phase}</span>
       </p>
       <p>
         Electron Configuration:{" "}
-        <span class="badge bg-primary text-wrap text-start">
+        <span className="badge bg-primary text-wrap text-start">
           {" "}
           {electronConfig}
         </span>
       </p>
       <p>
-        Total Electrons: <span class="badge bg-primary"> {totalElectrons}</span>
+        Total Electrons: <span className="badge bg-primary"> {totalElectrons}</span>
       </p>
       {shells ? <Canvas shells={shells} name={name} /> : ""}
     </div>

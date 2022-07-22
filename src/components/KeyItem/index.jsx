@@ -5,7 +5,7 @@ const KeyItem = ({name,color}) => {
     return (
       
         <h6>
-          <span class={`badge bg-${color} small-text rounded-pill`}>{name}</span>
+          <span className={`badge bg-${color} small-text rounded-pill`}>{name}</span>
         </h6>
       
     );

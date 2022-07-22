@@ -7,13 +7,13 @@ const Navbar = () => {
       <div className="collapse" id="navbarToggleExternalContent">
         <div className="p-4">
           <h5 className="text-muted h4">The Periodic Table App</h5>
-          <ul class="list-group">
-            <li class="list-group-item">
+          <ul className="list-group">
+            <li className="list-group-item">
               <a className="text-decoration-none" href="#periodic-table">
                 Periodic Table
               </a>
             </li>
-            <li class="list-group-item">
+            <li className="list-group-item">
               <a className="text-decoration-none" href="#credits">
                 Credits
               </a>

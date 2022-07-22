@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useRef } from "react";
 import Card from "../Card";
 import ElementProperties from "../ElementProperties";
 
@@ -13,10 +14,9 @@ const PeriodicElement = ({
   element,
   color = "primary",
 }) => {
-
-
+  const hasFetchedData = useRef(false);
   const [state, setState] = useState({});
-//  console.log(element.shells)
+
   useEffect(() => {
     const getData = () => {
       const url = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=${name}&origin=*`;
@@ -40,13 +40,14 @@ const PeriodicElement = ({
         .catch((error) => console.log(`There was an error: ${error}`));
     };
 
-    getData();
-  }, []);
+    if (!hasFetchedData.current) {
+      getData();
+      hasFetchedData.current = true;
+    }
+  }, [name,state]);
 
-//   console.log(element);
-
-  return (
-    <>
+  const main = (
+ <>
       <button
         type="button"
         className={`btn btn-${color} w-100 m-1`}
@@ -56,7 +57,7 @@ const PeriodicElement = ({
         {atomicNumber < 100 ? (
           <>{atomicNumber}</>
         ) : (
-          <span class="small-text">{atomicNumber}</span>
+          <span className="small-text">{atomicNumber}</span>
         )}
         <br />
         {elementName}
@@ -90,10 +91,10 @@ const PeriodicElement = ({
               ></button>
             </div>
             <div className="modal-body text-start">
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
+              <ul className="nav nav-tabs" id="myTab" role="tablist">
+                <li className="nav-item" role="presentation">
                   <button
-                    class="nav-link active"
+                    className="nav-link active"
                     id="home-tab"
                     data-bs-toggle="tab"
                     data-bs-target={`#${name}-summary-pane`}
@@ -105,9 +106,9 @@ const PeriodicElement = ({
                     Summary
                   </button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li className="nav-item" role="presentation">
                   <button
-                    class="nav-link"
+                    className="nav-link"
                     id="profile-tab"
                     data-bs-toggle="tab"
                     data-bs-target={`#${name}-info-pane`}
@@ -120,13 +121,13 @@ const PeriodicElement = ({
                   </button>
                 </li>
               </ul>
-              <div class="tab-content" id="myTabContent">
+              <div className="tab-content" id="myTabContent">
                 <div
-                  class="tab-pane fade show active"
+                  className="tab-pane fade show active"
                   id={`${name}-summary-pane`}
                   role="tabpanel"
                   aria-labelledby="home-tab"
-                  tabindex="0"
+                  tabIndex="0"
                 >
                   <Card
                     name={name}
@@ -140,11 +141,11 @@ const PeriodicElement = ({
                   />
                 </div>
                 <div
-                  class="tab-pane fade"
+                  className="tab-pane fade"
                   id={`${name}-info-pane`}
                   role="tabpanel"
                   aria-labelledby="profile-tab"
-                  tabindex="0"
+                  tabIndex="0"
                 >
                   {element !== undefined ? (
                     <ElementProperties
@@ -176,9 +177,10 @@ const PeriodicElement = ({
           </div>
         </div>
       </div>
-      
     </>
-  );
+  )
+
+  return <>{name!==""? main : <>""</>}</>;
 };
 
 export default PeriodicElement;
